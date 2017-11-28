@@ -2,6 +2,10 @@
 
 ![Harvest moon logo](harvest-moon-logo.jpg)
 
+## Features!
+* communicates with arduino through serial to receive analog sensor data
+* Django app with sensor data and graphs
+
 TODO:
 * Django app with sensor data
     * view last photo taken along with data
