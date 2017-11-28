@@ -8,6 +8,7 @@ TODO:
 * python irrigation script in crontab
     * Scheduled every afternoon
     * [Twitter API integration](https://github.com/bear/python-twitter)
+    * [Facebook API integration](http://nodotcom.org/python-facebook-tutorial.html)
     * OPTIONAL to water the plants if i send a tweet
 * another python script to sense when the plants are thirsty
     * should also send tweets about it
