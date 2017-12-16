@@ -27,7 +27,7 @@ SECRET_KEY = '^_jwr(gjz2k40f@vd)d%!)^5ex+sdcml%e#%4%&f6a!yd(3acp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.73',]
+ALLOWED_HOSTS = ['*',] # TODO
 
 
 # Application definition

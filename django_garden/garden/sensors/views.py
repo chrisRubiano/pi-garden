@@ -2,7 +2,7 @@ import serial
 from django.shortcuts import render
 
 
-def temp_view(request):
+def all_sensors_view(request):
     context_dict = {}
     ser = serial.Serial('/dev/ttyUSB0')
     ser.write(b's\n')
@@ -14,5 +14,5 @@ def temp_view(request):
             ser.close()
             break
     context_dict['temp'] = data
-    return render(request, 'sensors/temp.html', context_dict)
+    return render(request, 'sensors/all_sensors.html', context_dict)
     
