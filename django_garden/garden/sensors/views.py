@@ -2,7 +2,7 @@ import serial
 from django.shortcuts import render
 
 
-def temp_view(request):
+def sensors_view(request):
     context_dict = {}
     ser = serial.Serial('/dev/ttyUSB0')
     ser.write(b's\n')
