@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">Sensores</div>
+            <div class="card-body">
+                <h4 class="card-title"><i class="fa fa-thermometer-empty"></i> Temperatura</h4>
+                <p class="card-text">La temperatura ambiente del jardín</p>
+                <div class="btn.btn-info btn-lg">{{ temp }}° C</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">Sensores</div>
+            <div class="card-body">
+                <h4 class="card-title"><i class="fa fa-tint"></i> Humedad</h4>
+                <p class="card-text">El nivel de humedad del suelo</p>
+                <div class="btn.btn-info btn-lg">xxxxx</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
