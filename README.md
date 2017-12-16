@@ -19,3 +19,20 @@ TODO:
 * Script to save sensor data in a database
 * Graph sensor data history with [django graphos](https://github.com/agiliq/django-graphos)
 * Push notifications via [pushover](https://pushover.net/)
+
+-------
+
+## Instalation
+
+* `sudo -H pip3 install virtualenv`
+* `sudo -H pip3 install virtualenvwrapper`
+* `nano .bashrc` (or .zshrc) and add to the end of the file:
+```sh
+VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
+source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME=$HOME/.virtualenvs
+```
+* `mkvirtualenv <project's name>` to create a virtual environment to host all our python libraries
+* `workon <project's name>`
+    * `deactivate` to exit the virtual environment
+* once in the virtual environment run `pip3 install -r requirements.txt`

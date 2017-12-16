@@ -17,3 +17,5 @@ tests/.coverage
 build/
 tests/report/
 .vscode
+
+django_garden/\.idea/
