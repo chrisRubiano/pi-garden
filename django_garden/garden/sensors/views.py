@@ -7,7 +7,7 @@ def all_sensors_view(request):
     ser = serial.Serial('/dev/ttyUSB0')
     ser.write(b's\n')
     while True:
-        if (ser.in_waiting.get()>0):
+        if (ser.in_waiting>0):
             data = ser.readline()
             data = data.decode("ASCII")
             data = data.rstrip()
