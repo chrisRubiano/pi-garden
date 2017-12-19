@@ -4,7 +4,7 @@ from gpiozero import OutputDevice
 from time import sleep
 
 
-def all_sensors_view(request):
+def get_sensor_data():
     try:
         led = OutputDevice(17)
         led.on()
@@ -18,11 +18,15 @@ def all_sensors_view(request):
                 data = data.decode("ASCII")
                 data = data.rstrip()
                 break
-        context_dict['temp'] = data
-        return render(request, 'sensors/all_sensors.html', context_dict)
     except:
-        context_dict = {}
-        return render(request, 'sensors/all_sensors.html', context_dict)
+        data = "Error!"
     finally:
         led.off()
         ser.close()
+        return data
+
+def all_sensors_view(request):
+    context_dict = {}
+    data = get_sensor_data()
+    context_dict['temp'] = data
+    return render(request, 'sensors/all_sensors.html', context_dict)
