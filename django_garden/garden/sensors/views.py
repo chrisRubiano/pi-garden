@@ -7,6 +7,7 @@ from time import sleep
 def all_sensors_view(request):
     try:
         led = OutputDevice(17)
+        led.on()
         context_dict = {}
         ser = serial.Serial('/dev/ttyUSB0')
         sleep(2)
