@@ -2,6 +2,7 @@ import serial
 from django.shortcuts import render
 from gpiozero import OutputDevice
 from time import sleep
+from .models import Temperature
 
 
 def get_sensor_data():
@@ -30,3 +31,9 @@ def all_sensors_view(request):
     data = get_sensor_data()
     context_dict['temp'] = data
     return render(request, 'sensors/all_sensors.html', context_dict)
+
+def data_view(request):
+    context_dict = {}
+    temperature_list = Temperature.objects.all()
+    context_dict['temperature_list'] = temperature_list
+    return render(request, 'sensors/data.html', context_dict)
