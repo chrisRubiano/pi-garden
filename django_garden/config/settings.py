@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     # Third Party Apps
 
     # Custom Apps
-    # 'sensors'
+    'garden.sensors.apps.SensorsConfig'
 ]
 
 MIDDLEWARE = [
