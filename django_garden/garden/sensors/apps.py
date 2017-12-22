@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 
 class SensorsConfig(AppConfig):
-    name = 'sensors'
+    name = 'garden.sensors'
+    verbose_name = 'Sensors'
