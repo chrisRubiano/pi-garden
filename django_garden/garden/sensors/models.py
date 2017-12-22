@@ -4,7 +4,7 @@ from django.db import models
 class Temperature(models.Model):
     """Model definition for Temperature."""
 
-    date = models.DateTimeField(, auto_now=False, auto_now_add=False)
+    date = models.DateTimeField(auto_now_add=True)
     temperature = models.FloatField()
 
     class Meta:
