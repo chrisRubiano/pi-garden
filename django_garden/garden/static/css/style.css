@@ -2,3 +2,48 @@ h1,h2,h3,h4,h5{
     font-family: 'Bungee', cursive;
     font-weight: bold;
 }
+
+.navbar{
+    background-color: #34bb62!important;
+}
+
+*[class$='-success']{
+    background-color: #34bb62!important;
+}
+
+*[class$='-danger']{
+    background-color: tomato!important;
+}
+
+*[class$='-primary']{
+    background-color: #31849f!important;
+}
+
+*[class$='-warning']{
+    background-color: #ffa547!important;
+}
+
+*[class$='-info']{
+    background-color: #6c3bad!important;
+}
+
+
+*[class$='btn-success']:hover{
+    background-color: #55cc7d!important;
+}
+
+*[class$='btn-danger']:hover{
+    background-color: #ff816a!important;
+}
+
+*[class$='btn-primary']:hover{
+    background-color: #509eb8!important;
+}
+
+*[class$='btn-warning']:hover{
+    background-color: #ffb66a!important;
+}
+
+*[class$='btn-info']:hover{
+    background-color: #875ac2!important;
+}
