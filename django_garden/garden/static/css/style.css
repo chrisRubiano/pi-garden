@@ -7,43 +7,43 @@ h1,h2,h3,h4,h5{
     background-color: #34bb62!important;
 }
 
-*[class$='-success']{
+*[class*='-success']{
     background-color: #34bb62!important;
 }
 
-*[class$='-danger']{
+*[class*='-danger']{
     background-color: tomato!important;
 }
 
-*[class$='-primary']{
+*[class*='-primary']{
     background-color: #31849f!important;
 }
 
-*[class$='-warning']{
+*[class*='-warning']{
     background-color: #ffa547!important;
 }
 
-*[class$='-info']{
+*[class*='-info']{
     background-color: #6c3bad!important;
 }
 
 
-*[class$='btn-success']:hover{
+*[class*='btn-success']:hover{
     background-color: #55cc7d!important;
 }
 
-*[class$='btn-danger']:hover{
+*[class*='btn-danger']:hover{
     background-color: #ff816a!important;
 }
 
-*[class$='btn-primary']:hover{
+*[class*='btn-primary']:hover{
     background-color: #509eb8!important;
 }
 
-*[class$='btn-warning']:hover{
+*[class*='btn-warning']:hover{
     background-color: #ffb66a!important;
 }
 
-*[class$='btn-info']:hover{
+*[class*='btn-info']:hover{
     background-color: #875ac2!important;
 }
