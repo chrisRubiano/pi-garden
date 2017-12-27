@@ -1,24 +1,52 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 
 {% block content %}
 <div class="row mt-5">
     <div class="col-md-4">
         <div class="card text-white mb-3 bg-danger" style="max-width: 20rem;">
-            <div class="card-header">Sensores</div>
+            <div class="card-header">LM35</div>
             <div class="card-body">
-                <h4 class="card-title"><i class="fa fa-thermometer-empty"></i> Temperatura</h4>
-                <p class="card-text">La temperatura ambiente del jardín</p>
-                {% if temp %}
+                <h4 class="card-title"><i class="fa fa-thermometer-empty"></i> Temperatura del suelo</h4>
+                <p class="card-text">La temperatura cerca de las plantas</p>
+                {% if lm_temp %}
                     <div class="alert alert-primary">
-                        <h3 class="alert-heading">{{temp}}° C</h3>
-                    </div>                    
+                        <h3 class="alert-heading">{{lm_temp}}° C</h3>
+                    </div>
                 {% endif %}
             </div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="card text-white mb-3 bg-primary" style="max-width: 20rem;">
-            <div class="card-header">Sensores</div>
+            <div class="card-header">DHT11</div>
+            <div class="card-body">
+                <h4 class="card-title"><i class="fa fa-tint"></i> Humedad del ambiente</h4>
+                <p class="card-text">El porcentaje de humedad del ambiente</p>
+                {% if dh_humidity %}
+                    <div class="alert alert-info">
+                        <h3 class="alert-heading">{{dh_humidity}}%</h3>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white mb-3 bg-primary" style="max-width: 20rem;">
+            <div class="card-header">DHT11</div>
+            <div class="card-body">
+                <h4 class="card-title"><i class="fa fa-tint"></i> Temperatura del ambiente</h4>
+                <p class="card-text">La temperatura ambiente del jardín</p>
+                {% if dh_temp %}
+                    <div class="alert alert-danger">
+                        <h3 class="alert-heading">{{dh_temp}}° C</h3>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white mb-3 bg-warning" style="max-width: 20rem;">
+            <div class="card-header">Soil Moisture Sensor</div>
             <div class="card-body">
                 <h4 class="card-title"><i class="fa fa-tint"></i> Humedad</h4>
                 <p class="card-text">El nivel de humedad del suelo</p>

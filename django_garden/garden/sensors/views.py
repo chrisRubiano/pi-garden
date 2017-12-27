@@ -30,8 +30,10 @@ def get_sensor_data():
 
 def all_sensors_view(request):
     context_dict = {}
-    data = get_sensor_data()
-    context_dict['temp'] = data
+    lm_temp, dh_humidity, dh_temp = get_sensor_data()
+    context_dict['lm_temp'] = lm_temp
+    context_dict['dh_humidity'] = dh_humidity
+    context_dict['dh_temp'] = dh_temp
     return render(request, 'sensors/all_sensors.html', context_dict)
 
 def data_view(request):
