@@ -18,6 +18,8 @@ def get_sensor_data():
                 data = ser.readline()
                 data = data.decode("ASCII")
                 data = data.rstrip()
+                data = data.split(',')
+                print(data)
                 break
     except:
         data = "Error!"
