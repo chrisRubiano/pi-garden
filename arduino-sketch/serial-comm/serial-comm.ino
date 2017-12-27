@@ -12,9 +12,7 @@ int tempPin = 7;
 float temp = 0;
 float celSum;
 float humidity = 0;
-float humiditySum;
 float dhcel = 0;
-float dhcelSum;
 
 void setup() {
   // initialize serial:
@@ -56,38 +54,30 @@ void serialEvent() {
 
 void sendData() {
   for(int i=0; i < 10; i++){
-    // Leemos humedad
-    float h = dht.readHumidity();
-    // Leemos la temperatura en grados centígrados (por defecto)
-    float t = dht.readTemperature();
     // Checar que no haya errores en los datos del sensor
-    if (isnan(h) || isnan(t)) {
+    /*if (isnan(h) || isnan(t)) {
       Serial.println("Error obteniendo los datos del sensor DHT11");
       return;
-    }
+    }*/
 
     temp = analogRead(tempPin);
     float mv = (temp/1024.0)*5000;
     float cel = mv/10;
     celSum += cel;
-    humiditySum += h;
-    dhcelSum += t;
 
     if(i==9){
       // temperatura lm35
       cel = celSum/10;
       // humedad dht11
-      humidity = humidity/10;
+      humidity = dht.readHumidity();
       // temperatura dht11
-      dhcel = dhcelSum/10;
+      dhcel = dht.readTemperature();
       Serial.print(cel);
       Serial.print(",");
       Serial.print(humidity);
       Serial.print(",");
       Serial.print(dhcel);
       Serial.println();
-      celSum = 0;
-      humiditySum = 0;
     }
     delay(100);
 }
